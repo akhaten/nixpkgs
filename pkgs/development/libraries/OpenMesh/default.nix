@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
 
-    name = "OpenMesh";
+    pname = "OpenMesh";
     version = "9.0";
 
     src = fetchgit {
