@@ -1,12 +1,21 @@
-{ stdenv, fetchgit, cmake, lib }:
+{ stdenv, fetchFromGitLab, fetchgit, cmake, lib }:
 
 stdenv.mkDerivation rec {
 
     pname = "openmesh";
     version = "9.0";
 
-    src = fetchgit {
-        url = "https://gitlab.vci.rwth-aachen.de:9000/OpenMesh/OpenMesh";
+    # src = fetchgit {
+    #     url = "https://gitlab.vci.rwth-aachen.de:9000/OpenMesh/OpenMesh";
+    #     rev = "adebfb1ec0c14a43f5503a2dfea3d76599eb28ab";
+    #     sha256 = "sha256-IGh9pHD3IgcRF9hl1IbsNSihCzHRB7W4y91Qg/uJ+CY=";
+    # };
+
+    src = fetchFromGitLab {
+        # domain = "git.pleroma.social";
+        # group = "pleroma";
+        owner = "OpenMesh";
+        repo = "OpenMesh";
         rev = "adebfb1ec0c14a43f5503a2dfea3d76599eb28ab";
         sha256 = "sha256-IGh9pHD3IgcRF9hl1IbsNSihCzHRB7W4y91Qg/uJ+CY=";
     };
