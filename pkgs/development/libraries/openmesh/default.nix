@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
 
-    pname = "OpenMesh";
+    pname = "openmesh";
     version = "9.0";
 
     src = fetchgit {
@@ -14,8 +14,6 @@ stdenv.mkDerivation rec {
     nativeBuildInputs = [
         cmake
     ];
-
-#    doCheck = false;
 
     meta = with lib; {
         description = ''
